@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+:root {
+    --header: #311e14;
+    --cor-principal: #faf0e7; 
+    --laranja: #e2853d;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+
+.topo {
+    background-color: var(--header);
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.t-topo {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
+    margin-left: 7px;
+}
+
+.logo-topo {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.favoritos {
+    float: right;            /* ISSO joga pra direita */
+    margin-right: 15px;
+    line-height: 50px;       /* alinha com o header */
+}
+
+/* imagem */
+.logo-favoritos {
+    vertical-align: middle;
+}
+
+/* texto */
+.favoritos-topo {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-image: url(../imagens/foto-fundo-header.png);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 120px;
+    text-align: center;   
+}
+
+.categorias {
+    border: var(--laranja);
+    display: inline-block;
+}
+
+.logo-nav {
+    border: #e2853d solid 2px;
+    border-radius: 25px;
+    padding: 5px;
+    display: block;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu p {
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+.circulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    padding: 8px; /* 🔥 espaço pra não cortar */
+    border: #71513f43 solid 1px;
+}
+
+.circulo:hover {
+    border: 1px solid #e2853d;
+    transform: scale(1.05); /* aumenta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition-duration: .3s;
+}
+
+.circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 🔥 mostra inteiro */
+    object-position: center;
+}
