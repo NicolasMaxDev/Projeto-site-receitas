@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/*para tela de notebook*/
+
 :root {
     --header: #311e14;
     --cor-principal: #faf0e7; 
@@ -16,7 +18,7 @@ body {
     background-color: var(--cor-principal);
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
@@ -61,13 +63,25 @@ h1, h2, h3{
 }
 
 header {
-    background-image: url(../imagens/foto-fundo-header.png);
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 120px;
-    text-align: center;   
+    background-color: rgb(200, 200, 228);
+    background: url(../imagens/foto-fundo-header.png);
+    background-size: cover;
+    height: 250px;
+    text-align: center; 
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;  
+    width: 100%; 
+}
+
+header > img {
+    margin-left: 20px;
+    width: 90px;
+    height: 100px;
+}
+
+.titulo-principal {
+    font-size: 2.5em;
 }
 
 .categorias {
@@ -85,6 +99,7 @@ header {
 .menu {
     text-align: center;
     padding: 20px 0;
+    background-color: #f5ebe2;
 }
 
 .menu ul {
@@ -106,7 +121,7 @@ header {
 
 .menu p {
     margin-top: 3px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .icone {
@@ -117,20 +132,22 @@ header {
 
 
 .circulo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin: auto;
     padding: 8px; /* 🔥 espaço pra não cortar */
-    border: #71513f43 solid 1px;
+    border: #311e1469 solid 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .circulo:hover {
-    border: 1px solid #e2853d;
-    transform: scale(1.05); /* aumenta */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition-duration: .3s;
+    border: 2px solid #e2853d;
+    transform: scale(1.06); /* aumenta */
+    box-shadow: 0 4px 10px rgba(240, 164, 64, 0.473);
+    transition-duration: .2s;
+    cursor: pointer;
 }
 
 .circulo img {
@@ -138,4 +155,89 @@ header {
     height: 100%;
     object-fit: contain; /* 🔥 mostra inteiro */
     object-position: center;
+}
+
+.intro > h2 {
+    transform: translateY(15px);
+}
+
+.intro {
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--header);
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.receitas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card { 
+    background-color: #faf4f1;
+    width: 270px;
+    height: 320px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  /*--------------------*/
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card:hover {
+    transform: scale(1.07); 
+    transition-duration: .3s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(#e2853d, #e2853d, #e2853d, 0.5);
+}
+
+.card > img {
+    border-radius: 25px 25px 0px 0px;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+
+.card > p {
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.card > h3 {
+    font-family: 'Poppins', sans-serif;;
+}
+
+footer {
+    height: 40px;
+    background-color: #311e14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer > p {
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p > a {
+    color: white;
 }

@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+/*para tela de notebook*/
+
+:root {
+    --header: #311e14;
+    --cor-principal: #faf0e7; 
+    --laranja: #e2853d;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.topo {
+    background-color: var(--header);
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.t-topo {
+    display: inline-block;
+    height: auto;
+    font-size: 1.3em;
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
+    margin-left: 7px;
+}
+
+.logo-topo {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.favoritos {
+    float: right;            /* ISSO joga pra direita */
+    margin-right: 15px;
+    line-height: 50px;       /* alinha com o header */
+}
+
+/* imagem */
+.logo-favoritos {
+    vertical-align: middle;
+}
+
+/* texto */
+.favoritos-topo {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    margin: 0;
+}
+
+
+.menu {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    background-color: #f5ebe2;
+    list-style: none;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu p {
+    font-size: 16px;
+    transform: translateY(-7px);
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    padding: 8px; /* 🔥 espaço pra não cortar */
+    border: #311e1469 solid 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.circulo:hover {
+    border: 2px solid #e2853d;
+    transform: scale(1.06); /* aumenta */
+    box-shadow: 0 4px 10px rgba(240, 164, 64, 0.473);
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 🔥 mostra inteiro */
+    object-position: center;
+}
+
+
+/* foto do home */
+.icone {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+/* Receita strogonoff */
+.intro > h2 {
+    margin: 20px;
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--header);
+    transform: translateY(10px);
+}
+
+/* ------------------------------------------- */
+
+
+/* section com a caixa da imagem e ingredientes */
+/* container principal lado a lado */
+.container-receita {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    align-items: flex-start;
+}
+
+/* imagem */
+.imagem-comida {
+    width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.imagem-comida img {
+    width: 100%;
+    display: block;
+}
+
+/* botão */
+.btn-fav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    font-size: 1em;
+    justify-content: right;  
+    align-items: center;
+    padding: 12px;
+    border: none;
+    background-color: var(--laranja);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-fav > img {
+    color: white;
+    width: 35px;
+    height: 35px;
+    transform: translateX(-6px);
+    justify-content: left;
+}
+
+.btn-fav > img:hover {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(97%) saturate(7492%) hue-rotate(0deg) brightness(102%) contrast(105%);
+    transition-duration: .3s;
+    width: 39px;
+    height: 39px;
+}
+
+.btn-fav:hover {
+    background-color: #c96d2c;
+    transition-duration: .3s;
+}
+
+/* descrição */
+.descricao {
+    flex: 1;
+}
+
+/* caixas (ingredientes + preparo) */
+.box {
+    background-color: #fff7f2;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#modo-preparo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* título */
+.titulo-box {
+    background-color: var(--laranja);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* lista */
+.box ul {
+    padding: 15px;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+/* texto preparo */
+.box p {
+    padding: 15px;
+    line-height: 1.6;
+    text-indent: 20px;
+}
+
+/*media query para celular */
+@media (max-width: 768px) {
+    .container-receita {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-comida {
+        width: 90%;
+    }
+
+    .descricao {
+        width: 90%;
+    }
+}
+
+/*media query para tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .container-receita {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .imagem-comida {
+        width: 70%;
+    }
+
+    .descricao {
+        width: 80%;
+    }
+
+    .titulo-box {
+        font-size: 1.2em;
+    }
+
+    .box p, .box ul {
+        font-size: 15px;
+    }
+}
+
+/* parte dos cards (outras receitas) */
+
+.receitas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card {
+    background-color: #faf4f1;
+    width: 270px;
+    height: 240px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  /*--------------------*/
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card:hover {
+    transform: scale(1.07); 
+    transition-duration: .3s;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(#e2853d, #e2853d, #e2853d, 0.5);
+}
+
+.card > img {
+    border-radius: 25px 25px 0px 0px;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+
+.card > p {
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.card > h3 {
+    font-family: 'Poppins', sans-serif;
+    transform: translateY(-23px);
+}
+
+.outras-receitas {
+    text-align: center;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    height: 48px;
+    background-color: #311e14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer > p {
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p > a {
+    color: white;
+}
+
+
+@media (min-width: 1025px) {
+}
+
