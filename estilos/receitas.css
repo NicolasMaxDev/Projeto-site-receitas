@@ -260,6 +260,10 @@ h1, h2, h3 {
     .descricao {
         width: 90%;
     }
+
+    .menu {
+        display: none;
+    }
 }
 
 /*media query para tablet */
