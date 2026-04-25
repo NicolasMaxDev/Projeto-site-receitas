@@ -389,14 +389,28 @@ footer > p > a {
         -webkit-overflow-scrolling: touch; /* Suaviza o scroll no mobile */
     }
 
-    .menu::-webkit-scrollbar {
-        display: none;             /* Esconde a barra de rolagem visualmente */
-    }
-
     .menu li {
         display: inline-block;     /* Mantém os itens um ao lado do outro */
         margin: 0 10px;            /* Ajusta o espaçamento lateral */
         flex: 0 0 auto;            /* Impede que os ícones fiquem espremidos */
+    }
+
+        /* 1. Define a largura da barra */
+    .menu::-webkit-scrollbar {
+        height: 8px; /* Altura da barra horizontal */
+    }
+
+    /* 2. Define o "fundo" da barra (a trilha) */
+    .menu::-webkit-scrollbar-track {
+        background: #f5ebe2; /* Cor de fundo do seu site */
+        border-radius: 10px;
+    }
+
+    /* 3. Define a "alça" que o usuário arrasta */
+    .menu::-webkit-scrollbar-thumb {
+        background-color: #e2853d; /* Cor laranja do seu tema */
+        border-radius: 10px;       /* Deixa ela arredondada */
+        border: 2px solid #f5ebe2; /* Espaçamento da alça para não ficar colada */
     }
 }
 
