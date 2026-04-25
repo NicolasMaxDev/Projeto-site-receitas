@@ -241,3 +241,26 @@ footer > p {
 footer > p > a {
     color: white;
 }
+
+/* media query para o menu */
+
+@media (max-width: 768px) {
+    .menu {
+        display: flex;             /* Transforma a lista em flexbox */
+        overflow-x: auto;          /* Habilita o scroll horizontal */
+        padding: 20px 10px;
+        white-space: nowrap;       /* Impede que os itens quebrem de linha */
+        justify-content: flex-start; /* Alinha os itens começando da esquerda */
+        -webkit-overflow-scrolling: touch; /* Suaviza o scroll no mobile */
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;             /* Esconde a barra de rolagem visualmente */
+    }
+
+    .menu li {
+        display: inline-block;     /* Mantém os itens um ao lado do outro */
+        margin: 0 10px;            /* Ajusta o espaçamento lateral */
+        flex: 0 0 auto;            /* Impede que os ícones fiquem espremidos */
+    }
+}
