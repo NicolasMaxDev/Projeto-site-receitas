@@ -132,7 +132,7 @@ h1, h2, h3 {
 }
 
 
-/* Receita strogonoff */
+/* Receita  */
 .intro > h2 {
     margin: 20px;
     font-size: 2.5em;
@@ -263,6 +263,8 @@ h1, h2, h3 {
 
     .menu {
         display: none;
+        height: 100px;
+        width: 96%;
     }
 }
 
